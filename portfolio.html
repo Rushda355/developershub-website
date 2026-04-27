@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="DevelopersHub Portfolio - Our projects across software development, AI solutions and digital marketing."/>
+  <title>Portfolio | DevelopersHub Corporation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        Developers<span class="logo-accent">Hub</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta">Book a Meeting</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO WITH BG IMAGE -->
+  <section class="page-hero-img">
+    <img src="images/hero-bg.jpg" alt="Portfolio"/>
+    <div class="phi-overlay"></div>
+    <div class="phi-content container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Portfolio</span>
+      </div>
+      <h1>Our <span class="gradient-text">Portfolio</span></h1>
+      <p>A showcase of projects we have delivered across software development, AI solutions, digital marketing and more.</p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="portfolio-stats-bar">
+    <div class="container">
+      <div class="psb-grid">
+        <div class="psb-item"><strong>100+</strong><span>Projects Completed</span></div>
+        <div class="psb-divider"></div>
+        <div class="psb-item"><strong>30+</strong><span>Happy Clients</span></div>
+        <div class="psb-divider"></div>
+        <div class="psb-item"><strong>15+</strong><span>Industries Served</span></div>
+        <div class="psb-divider"></div>
+        <div class="psb-item"><strong>98%</strong><span>Client Satisfaction</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="ai">AI Solutions</button>
+        <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        <button class="filter-btn" data-filter="postprod">Post Production</button>
+      </div>
+
+      <div class="portfolio-full-grid" id="portfolioGrid">
+
+        <div class="pf-card" data-category="web">
+          <div class="pf-thumb">
+            <img src="images/ecomerce.jpg" alt="E-Commerce Platform"/>
+            <div class="pf-overlay">
+              <a href="#" class="pf-view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            </div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag">Web Development</span>
+              <span class="pf-tag">React</span>
+            </div>
+            <h3>E-Commerce Platform</h3>
+            <p>Full-stack e-commerce solution with AI recommendation engine, real-time inventory and Stripe payment integration.</p>
+            <div class="pf-meta">
+              <span><i class="fa-solid fa-calendar"></i> 2024</span>
+              <span><i class="fa-solid fa-clock"></i> 3 Months</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pf-card" data-category="ai">
+          <div class="pf-thumb">
+            <img src="images/health.jpg" alt="Healthcare App"/>
+            <div class="pf-overlay">
+              <a href="#" class="pf-view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            </div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag">AI Solutions</span>
+              <span class="pf-tag">SaaS</span>
+            </div>
+            <h3>Healthcare Management App</h3>
+            <p>Cloud-based patient management system with AI-powered diagnostics support, appointment scheduling and reporting.</p>
+            <div class="pf-meta">
+              <span><i class="fa-solid fa-calendar"></i> 2024</span>
+              <span><i class="fa-solid fa-clock"></i> 4 Months</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pf-card" data-category="marketing">
+          <div class="pf-thumb">
+            <img src="images/Markting.jpg" alt="Marketing Dashboard"/>
+            <div class="pf-overlay">
+              <a href="#" class="pf-view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            </div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag">Digital Marketing</span>
+              <span class="pf-tag">Analytics</span>
+            </div>
+            <h3>Marketing Analytics Dashboard</h3>
+            <p>Real time multi-channel marketing analytics platform integrating Google Ads, Meta Ads and SEO performance data.</p>
+            <div class="pf-meta">
+              <span><i class="fa-solid fa-calendar"></i> 2023</span>
+              <span><i class="fa-solid fa-clock"></i> 2 Months</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pf-card" data-category="mobile">
+          <div class="pf-thumb">
+            <img src="images/mobile.jpg" alt="Food Delivery App"/>
+            <div class="pf-overlay">
+              <a href="#" class="pf-view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            </div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag">Mobile App</span>
+              <span class="pf-tag">Flutter</span>
+            </div>
+            <h3>Food Delivery App</h3>
+            <p>Cross-platform food delivery application with real-time order tracking, driver management and payment gateway.</p>
+            <div class="pf-meta">
+              <span><i class="fa-solid fa-calendar"></i> 2023</span>
+              <span><i class="fa-solid fa-clock"></i> 3 Months</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pf-card" data-category="ai">
+          <div class="pf-thumb">
+            <img src="images/ai.jpg" alt="AI Chatbot"/>
+            <div class="pf-overlay">
+              <a href="#" class="pf-view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            </div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag">AI Automation</span>
+              <span class="pf-tag">Chatbot</span>
+            </div>
+            <h3>Customer Support AI Bot</h3>
+            <p>Intelligent customer support chatbot using GPT-4 with CRM integration, ticket creation and multi-language support.</p>
+            <div class="pf-meta">
+              <span><i class="fa-solid fa-calendar"></i> 2024</span>
+              <span><i class="fa-solid fa-clock"></i> 6 Weeks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pf-card" data-category="web">
+          <div class="pf-thumb">
+            <img src="images/lms.jpg" alt="Learning Platform"/>
+            <div class="pf-overlay">
+              <a href="#" class="pf-view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            </div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag">Web Development</span>
+              <span class="pf-tag">Next.js</span>
+            </div>
+            <h3>Online Learning Platform</h3>
+            <p>Full-featured LMS with video streaming, quizzes, progress tracking, certificates and instructor dashboard.</p>
+            <div class="pf-meta">
+              <span><i class="fa-solid fa-calendar"></i> 2023</span>
+              <span><i class="fa-solid fa-clock"></i> 5 Months</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pf-card" data-category="postprod">
+          <div class="pf-thumb">
+            <img src="images/postpord.jpg" alt="Brand Video"/>
+            <div class="pf-overlay">
+              <a href="#" class="pf-view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            </div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag">Post Production</span>
+              <span class="pf-tag">Motion Graphics</span>
+            </div>
+            <h3>Brand Identity Video Series</h3>
+            <p>Complete brand video production including motion graphics, color grading and social media cut-downs for a SaaS company.</p>
+            <div class="pf-meta">
+              <span><i class="fa-solid fa-calendar"></i> 2024</span>
+              <span><i class="fa-solid fa-clock"></i> 3 Weeks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pf-card" data-category="marketing">
+          <div class="pf-thumb">
+            <img src="images/seo.jpg" alt="SEO Campaign"/>
+            <div class="pf-overlay">
+              <a href="#" class="pf-view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            </div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag">SEO</span>
+              <span class="pf-tag">Content Marketing</span>
+            </div>
+            <h3>SEO Growth Campaign</h3>
+            <p>Comprehensive SEO strategy that grew organic traffic by 320% in 6 months for a B2B software company.</p>
+            <div class="pf-meta">
+              <span><i class="fa-solid fa-calendar"></i> 2023</span>
+              <span><i class="fa-solid fa-clock"></i> 6 Months</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pf-card" data-category="mobile">
+          <div class="pf-thumb">
+            <img src="images/fitness.jpg" alt="Fitness App"/>
+            <div class="pf-overlay">
+              <a href="#" class="pf-view-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            </div>
+          </div>
+          <div class="pf-body">
+            <div class="pf-tags">
+              <span class="pf-tag">Mobile App</span>
+              <span class="pf-tag">React Native</span>
+            </div>
+            <h3>Fitness Tracking App</h3>
+            <p>AI-powered personal fitness app with workout planning, nutrition tracking, progress analytics and wearable integration.</p>
+            <div class="pf-meta">
+              <span><i class="fa-solid fa-calendar"></i> 2024</span>
+              <span><i class="fa-solid fa-clock"></i> 4 Months</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="no-results" id="noResults" style="display:none;">
+        <i class="fa-solid fa-folder-open"></i>
+        <p>No projects found in this category.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Client Reviews</span>
+        <h2>What Our Clients <span class="gradient-text">Say</span></h2>
+        <p>Real feedback from businesses we have worked with.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>"DevelopersHub delivered our e-commerce platform ahead of schedule. Their attention to detail and technical expertise is outstanding. Highly recommended for any serious project."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+            <div>
+              <strong>Kamran Shahid</strong>
+              <span>CEO, PakMart Solutions — Karachi</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Their AI chatbot cut our customer support workload by more than half. The team was professional, responsive and delivered exactly what was promised."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+            <div>
+              <strong>Sana Mirza</strong>
+              <span>CTO, CloudDesk Pakistan — Lahore</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>"Our organic traffic grew by over 200% in just 5 months. DevelopersHub understands the Pakistani market and knows exactly how to drive real results."</p>
+          <div class="testi-author">
+            <div class="testi-avatar"><i class="fa-solid fa-user"></i></div>
+            <div>
+              <strong>Farhan Qureshi</strong>
+              <span>Marketing Director, TechBase PK — Islamabad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-text">
+          <h2>Have a Project <span class="gradient-text-light">In Mind?</span></h2>
+          <p>Let us turn your idea into a real, impactful digital product.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="booking.html" class="btn-white">Schedule a Meeting</a>
+          <a href="contact.html" class="btn-outline-white">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <div>
+            <span class="footer-logo-text">DevelopersHub</span>
+            <span class="footer-logo-sub">CORPORATION</span>
+          </div>
+        </a>
+        <p>DevelopersHub Corporation offers cutting edge technology solutions and digital services to businesses across Pakistan and worldwide.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Razia Shareef Plaza 7th Avenue, Office No 3 West Wing, Islamabad, Punjab 44010, PK</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+447429732974</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>hr@developershubcorp.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 DevelopersHub Corporation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

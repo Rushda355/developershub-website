@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Book a meeting with DevelopersHub Corporation - Schedule a free discovery call with our expert team."/>
+  <title>Book a Meeting | DevelopersHub Corporation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+       Developers<span class="logo-accent">Hub</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta">Book a Meeting</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO WITH BG IMAGE -->
+  <section class="page-hero-img">
+    <img src="images/hero-bg.jpg" alt="Book a Meeting"/>
+    <div class="phi-overlay"></div>
+    <div class="phi-content container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Book a Meeting</span>
+      </div>
+      <h1>Schedule a <span class="gradient-text">Free Call</span></h1>
+      <p>Book a 30-minute free discovery call with our expert team. No commitment required just a conversation about your goals.</p>
+    </div>
+  </section>
+
+  <!-- MEETING TYPES -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Choose Your Meeting</span>
+        <h2>What Type of Call <span class="gradient-text">Do You Need?</span></h2>
+        <p>Select the meeting type that best fits your current needs.</p>
+      </div>
+      <div class="meeting-types-grid">
+        <div class="meeting-type-card active-meeting" id="mt1" onclick="selectMeeting(this, 'Discovery Call')">
+          <div class="mt-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3>Discovery Call</h3>
+          <p>A free 30-minute introductory session to understand your project goals and how we can help.</p>
+          <div class="mt-meta">
+            <span><i class="fa-solid fa-clock"></i> 30 Minutes</span>
+            <span><i class="fa-solid fa-tag"></i> Free</span>
+          </div>
+        </div>
+        <div class="meeting-type-card" id="mt2" onclick="selectMeeting(this, 'Technical Consultation')">
+          <div class="mt-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Technical Consultation</h3>
+          <p>A deep-dive technical session to discuss architecture, technology stack and implementation strategy.</p>
+          <div class="mt-meta">
+            <span><i class="fa-solid fa-clock"></i> 60 Minutes</span>
+            <span><i class="fa-solid fa-tag"></i> Free</span>
+          </div>
+        </div>
+        <div class="meeting-type-card" id="mt3" onclick="selectMeeting(this, 'Project Scoping')">
+          <div class="mt-icon"><i class="fa-solid fa-file-lines"></i></div>
+          <h3>Project Scoping</h3>
+          <p>A structured session to define project scope, timelines, milestones and provide a detailed estimate.</p>
+          <div class="mt-meta">
+            <span><i class="fa-solid fa-clock"></i> 45 Minutes</span>
+            <span><i class="fa-solid fa-tag"></i> Free</span>
+          </div>
+        </div>
+        <div class="meeting-type-card" id="mt4" onclick="selectMeeting(this, 'Strategy Session')">
+          <div class="mt-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Strategy Session</h3>
+          <p>A focused session for existing clients to review progress, plan next phases and align on strategy.</p>
+          <div class="mt-meta">
+            <span><i class="fa-solid fa-clock"></i> 45 Minutes</span>
+            <span><i class="fa-solid fa-tag"></i> Free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="section-padding bg-light">
+    <div class="container booking-main-grid">
+      <div class="booking-form-box">
+        <h2>Fill In Your <span class="gradient-text">Details</span></h2>
+        <p>Complete the form below and we will confirm your meeting within a few hours.</p>
+
+        <div class="form-success" id="bookingSuccess">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Your meeting has been booked successfully! We will send a confirmation to your email shortly.</span>
+        </div>
+        <div class="form-error" id="bookingError">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span>Please fill in all required fields.</span>
+        </div>
+
+        <form id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <input type="hidden" id="meetingType" name="meeting_type" value="Discovery Call"/>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bName">Full Name <span class="required">*</span></label>
+              <input type="text" id="bName" name="name" placeholder="Ali Hassan" required/>
+            </div>
+            <div class="form-group">
+              <label for="bEmail">Email Address <span class="required">*</span></label>
+              <input type="email" id="bEmail" name="email" placeholder="ali@company.com" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bPhone">Phone Number</label>
+              <input type="tel" id="bPhone" name="phone" placeholder="+92 300 0000000"/>
+            </div>
+            <div class="form-group">
+              <label for="bCompany">Company / Organization</label>
+              <input type="text" id="bCompany" name="company" placeholder="Your company name"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bDate">Preferred Date <span class="required">*</span></label>
+              <input type="date" id="bDate" name="preferred_date" required/>
+            </div>
+            <div class="form-group">
+              <label for="bTime">Preferred Time <span class="required">*</span></label>
+              <select id="bTime" name="preferred_time" required>
+                <option value="">Select a time slot...</option>
+                <option value="09:00">09:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">01:00 PM</option>
+                <option value="14:00">02:00 PM</option>
+                <option value="15:00">03:00 PM</option>
+                <option value="16:00">04:00 PM</option>
+                <option value="17:00">05:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="bService">Service Interested In</label>
+            <select id="bService" name="service">
+              <option value="">Select a service...</option>
+              <option value="software">Software Development</option>
+              <option value="ai">AI Solutions & Automation</option>
+              <option value="content">AI Content Generation</option>
+              <option value="marketing">Digital Marketing</option>
+              <option value="postprod">Post Production Services</option>
+              <option value="other">Other / Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bMessage">Tell Us About Your Project</label>
+            <textarea id="bMessage" name="message" rows="5" placeholder="Briefly describe your project, goals and any specific questions you have for the call..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Preferred Meeting Platform</label>
+            <div class="platform-options">
+              <label class="platform-option">
+                <input type="radio" name="platform" value="Google Meet" checked/>
+                <span><i class="fa-brands fa-google"></i> Google Meet</span>
+              </label>
+              <label class="platform-option">
+                <input type="radio" name="platform" value="Zoom"/>
+                <span><i class="fa-solid fa-video"></i> Zoom</span>
+              </label>
+              <label class="platform-option">
+                <input type="radio" name="platform" value="Microsoft Teams"/>
+                <span><i class="fa-brands fa-microsoft"></i> Teams</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary form-submit-btn">
+            Confirm Booking <i class="fa-solid fa-calendar-check"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="booking-side">
+        <div class="booking-info-box">
+          <h4>What to Expect</h4>
+          <ul class="booking-expect-list">
+            <li>
+              <div class="bel-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong>Instant Confirmation</strong>
+                <p>You will receive a confirmation email with meeting details within a few hours.</p>
+              </div>
+            </li>
+            <li>
+              <div class="bel-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong>No Preparation Needed</strong>
+                <p>Just show up our team will guide the conversation based on your goals.</p>
+              </div>
+            </li>
+            <li>
+              <div class="bel-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong>Zero Commitment</strong>
+                <p>This is a free consultation  no contracts, no pressure, no obligations.</p>
+              </div>
+            </li>
+            <li>
+              <div class="bel-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong>Expert Guidance</strong>
+                <p>You will speak directly with a senior team member  not a sales rep.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="booking-contact-box">
+          <h4>Prefer to Reach Out Directly?</h4>
+          <a href="mailto:hr@developershubcorp.com" class="bc-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>hr@developershubcorp.com</span>
+          </a>
+          <a href="tel:+447429732974" class="bc-link">
+            <i class="fa-solid fa-phone"></i>
+            <span>+447429732974</span>
+          </a>
+          <div class="bc-hours">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon – Sat, 9:00 AM – 6:00 PM PKT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY BOOK -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Book With Us</span>
+        <h2>We Make It <span class="gradient-text">Easy</span></h2>
+        <p>Our consultation process is designed to be simple, clear and valuable from the very first call.</p>
+      </div>
+      <div class="why-book-grid">
+        <div class="wb-card">
+          <div class="wb-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Fast Response</h3>
+          <p>We confirm all bookings within a few hours and send you a calendar invite immediately.</p>
+        </div>
+        <div class="wb-card">
+          <div class="wb-icon"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Senior Experts</h3>
+          <p>Every call is handled by a senior developer, designer or strategist  not a junior rep.</p>
+        </div>
+        <div class="wb-card">
+          <div class="wb-icon"><i class="fa-solid fa-globe"></i></div>
+          <h3>Any Time Zone</h3>
+          <p>We accommodate clients across all time zones with flexible scheduling options.</p>
+        </div>
+        <div class="wb-card">
+          <div class="wb-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>100% Free</h3>
+          <p>All initial consultation calls are completely free with no hidden charges whatsoever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-text">
+          <h2>Still Have <span class="gradient-text-light">Questions?</span></h2>
+          <p>Check our FAQ or send us a message directly.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn-white">Contact Us</a>
+          <a href="services.html" class="btn-outline-white">View Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <div>
+            <span class="footer-logo-text">DevelopersHub</span>
+            <span class="footer-logo-sub">CORPORATION</span>
+          </div>
+        </a>
+        <p>DevelopersHub Corporation offers cutting edge technology solutions and digital services to businesses across Pakistan and worldwide.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Razia Shareef Plaza 7th Avenue, Office No 3 West Wing, Islamabad, Punjab 44010, PK</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+447429732974</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>hr@developershubcorp.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 DevelopersHub Corporation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

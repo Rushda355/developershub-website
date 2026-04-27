@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact DevelopersHub Corporation - Get in touch with our team for your project needs."/>
+  <title>Contact Us | DevelopersHub Corporation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        Developers<span class="logo-accent">Hub</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="booking.html" class="nav-cta">Book a Meeting</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO WITH BG IMAGE -->
+  <section class="page-hero-img">
+    <img src="images/hero-bg.jpg" alt="Contact Us"/>
+    <div class="phi-overlay"></div>
+    <div class="phi-content container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Contact</span>
+      </div>
+      <h1>Get In <span class="gradient-text">Touch</span></h1>
+      <p>Have a project in mind or need expert advice? Our team is ready to help you build something great.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO CARDS -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-info-grid">
+        <div class="contact-info-card">
+          <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+          <h3>Email Us</h3>
+          <p>Send us an email and we will respond within 24 hours.</p>
+          <a href="mailto:hr@developershubcorp.com">hr@developershubcorp.com</a>
+        </div>
+        <div class="contact-info-card">
+          <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+          <h3>Call Us</h3>
+          <p>Speak directly with our team during business hours.</p>
+          <a href="tel:+447429732974">+447429732974</a>
+        </div>
+        <div class="contact-info-card">
+          <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Visit Us</h3>
+          <p>Our office is located in Islamabad, Pakistan.</p>
+          <span>Razia Shareef Plaza, Islamabad, PK</span>
+        </div>
+        <div class="contact-info-card">
+          <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Business Hours</h3>
+          <p>Monday to Saturday, we are here to help.</p>
+          <span>9:00 AM – 6:00 PM PKT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM + SIDE -->
+  <section class="section-padding bg-light">
+    <div class="container contact-main-grid">
+      <div class="contact-form-box">
+        <h2>Send Us a <span class="gradient-text">Message</span></h2>
+        <p>Fill out the form below and our team will respond within one business day.</p>
+
+        <div class="form-success" id="formSuccess">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Your message has been sent successfully. We will get back to you soon!</span>
+        </div>
+        <div class="form-error" id="formError">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span>Please fill in all required fields.</span>
+        </div>
+
+        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Ali Hassan" required/>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="ali@company.com" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+92 300 0000000"/>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interested In</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option value="software">Software Development</option>
+                <option value="ai">AI Solutions & Automation</option>
+                <option value="content">AI Content Generation</option>
+                <option value="marketing">Digital Marketing</option>
+                <option value="postprod">Post Production</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject <span class="required">*</span></label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry, General question..."/>
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us about your project, goals and timeline..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit-btn">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-side">
+        <div class="contact-map">
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <p>DevelopersHub Corporation</p>
+            <span>Razia Shareef Plaza, Islamabad, PK</span>
+          </div>
+        </div>
+        <div class="contact-social-box">
+          <h4>Follow Us</h4>
+          <div class="contact-socials">
+            <a href="#" class="cs-link">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="#" class="cs-link">
+              <i class="fa-brands fa-facebook-f"></i>
+              <span>Facebook</span>
+            </a>
+            <a href="#" class="cs-link">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <p>Quick answers to the most common questions we receive.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How do I get started with a project?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Simply fill out our contact form or book a free discovery call. We will discuss your requirements, goals and timeline and provide a detailed proposal within 2-3 business days.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What is your typical project timeline?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Project timelines vary based on scope and complexity. A simple website takes 2-4 weeks, while a full SaaS platform may take 3-6 months. We provide a detailed timeline during the proposal phase.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Do you offer post-launch support?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes. We offer ongoing maintenance and support packages after project delivery. Our team remains available for bug fixes, updates and feature additions as your business grows.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>What technologies do you work with?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>We work with modern technologies including React, Next.js, Node.js, Python, Flutter, AWS and more. For AI projects we use OpenAI, LangChain, TensorFlow and other leading frameworks.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>How much does a project cost?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Pricing depends on project scope, complexity and timeline. We offer transparent, milestone-based pricing with no hidden fees. Book a free call and we will provide a detailed quote tailored to your needs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Do you work with international clients?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely. We work with clients globally across all time zones. Our team uses collaborative tools like Slack, Notion and Zoom to ensure smooth communication regardless of location.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section section-padding">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-text">
+          <h2>Ready to Start Your <span class="gradient-text-light">Project?</span></h2>
+          <p>Book a free discovery call and let us build something great together.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="booking.html" class="btn-white">Book a Meeting</a>
+          <a href="services.html" class="btn-outline-white">View Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <div>
+            <span class="footer-logo-text">DevelopersHub</span>
+            <span class="footer-logo-sub">CORPORATION</span>
+          </div>
+        </a>
+        <p>DevelopersHub Corporation offers cutting edge technology solutions and digital services to businesses across Pakistan and worldwide.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Razia Shareef Plaza 7th Avenue, Office No 3 West Wing, Islamabad, Punjab 44010, PK</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+447429732974</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>hr@developershubcorp.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 DevelopersHub Corporation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
